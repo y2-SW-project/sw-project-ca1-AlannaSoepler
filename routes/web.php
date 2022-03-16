@@ -16,5 +16,5 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.home');
-Route::get('subscriber/home', [App\Http\Controllers\HomeController::class, 'index'])->name('subscriber.home');
+Route::get('admin/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home');
+Route::get('subscriber/home', [App\Http\Controllers\Subscriber\HomeController::class, 'index'])->name('subscriber.home');
