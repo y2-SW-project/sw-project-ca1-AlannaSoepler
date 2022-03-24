@@ -51,7 +51,10 @@ class BrandController extends Controller
      */
     public function show($id)
     {
-        //
+        $brands = Brand::findOrFail($id);
+        return view('subscriber.brands.show', [
+            'brands' => $brands
+        ]);
     }
 
     /**

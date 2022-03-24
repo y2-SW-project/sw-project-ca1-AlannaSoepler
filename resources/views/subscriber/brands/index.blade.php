@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <h1>Hello</h1>
+                <div class="card-header">Brands</div>
             </div>
         </div>
     </div>
