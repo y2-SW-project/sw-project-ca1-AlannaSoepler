@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Subscriber\brandController as subBrandController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin.home');
 Route::get('subscriber/home', [App\Http\Controllers\Subscriber\HomeController::class, 'index'])->name('subscriber.home');
+
+Route::get('subscriber/brands/', [subBrandController::class, 'index'])->name('subscriber.brands.index');
+Route::get('subscriber/brands/{id}', [subBrandController::class, 'show'])->name('subscriber.brands.show');
